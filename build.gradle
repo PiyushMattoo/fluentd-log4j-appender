@@ -1,0 +1,30 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+}
+
+apply plugin: "java"
+apply plugin: "groovy"
+apply plugin: "idea"
+
+version = "1.0"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // project dependencies
+    compile "org.fluentd:fluent-logger:0.2.11"
+    compile "log4j:log4j:1.2.17"
+    testCompile "org.codehaus.groovy:groovy-all:2.3.1"
+    testCompile "org.spockframework:spock-core:0.7-groovy-2.0"
+}
+
+idea {
+    project {
+        javaVersion = 1.6
+        jdkName = "1.6"
+    }
+}
